@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  contextPath : /wxExample
+spring:
+  application:
+    name: admin
+  thymeleaf:
+   prefix: classpath:/templates/pages/
+   suffix: .html
+   mode: HTML
+   encoding: UTF-8
+   cache: false
+  datasource:
+    driverClassName : com.mysql.jdbc.Driver
+    url : jdbc:mysql://192.168.31.50:3306/do314?characterEncoding=UTF-8
+    username : do314
+    password : do314
+#     url : jdbc:mysql://localhost:3306/admin?characterEncoding=UTF-8
+#    username : root
+#    password : sys
+    type : com.alibaba.druid.pool.DruidDataSource
+
+logging:
+  file: logs/admin-client.log
+  level:
+    ROOT: INFO
+    org.apache.ibatis: debug
+    java.sql.Connection: debug
+    java.sql.Statement: debug
+    java.sql.PreparedStatement: debug
+    com.apache.ibatis: debug
+
+file :
+   path : D:/yg/pleiades/tomcat/8/resources/file/
+#  path : /opt/file/
